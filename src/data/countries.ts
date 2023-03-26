@@ -1,0 +1,70 @@
+export const countries = [
+	{
+		name: 'United States',
+		code: '1',
+		countryCode: 'US',
+		exampleNumber: '(555) 987-6543',
+	},
+	{ name: 'India', code: '91', countryCode: 'IN', exampleNumber: '1234567890' },
+	{ name: 'Canada', code: '1', countryCode: 'CA', exampleNumber: '1234567890' },
+	{
+		name: 'Mexico',
+		code: '52',
+		countryCode: 'MX',
+		exampleNumber: '1234567890',
+	},
+	{
+		name: 'United Kingdom',
+		code: '44',
+		countryCode: 'GB',
+		exampleNumber: '07123 456789',
+	},
+	{
+		name: 'France',
+		code: '33',
+		countryCode: 'FR',
+		exampleNumber: '06 12 34 56 78',
+	},
+	{
+		name: 'Germany',
+		code: '49',
+		countryCode: 'DE',
+		exampleNumber: '0176 12345678',
+	},
+	{
+		name: 'China',
+		code: '86',
+		countryCode: 'CN',
+		exampleNumber: '131 2345 6789',
+	},
+	{
+		name: 'Japan',
+		code: '81',
+		countryCode: 'JP',
+		exampleNumber: '090-1234-5678',
+	},
+	{
+		name: 'South Korea',
+		code: '82',
+		countryCode: 'KR',
+		exampleNumber: '010-1234-5678',
+	},
+	{
+		name: 'Australia',
+		code: '61',
+		countryCode: 'AU',
+		exampleNumber: '0412 345 678',
+	},
+	{
+		name: 'New Zealand',
+		code: '64',
+		countryCode: 'NZ',
+		exampleNumber: '021 123 4567',
+	},
+	{
+		name: 'South Africa',
+		code: '27',
+		countryCode: 'ZA',
+		exampleNumber: '071 234 5678',
+	},
+];

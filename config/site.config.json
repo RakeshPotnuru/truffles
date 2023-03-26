@@ -1,0 +1,41 @@
+{
+	"colors": {
+		"brand": {
+			"50": "#194BFB",
+			"100": "#FFFFFF",
+			"200": "#FAFAFA",
+			"300": "#718096"
+		},
+		"heading": "#202020",
+		"body": "#252F40",
+		"theme": "#194BFB"
+	},
+	"siteVersion": "0.1.0",
+	"logo": "",
+	"seo": {
+		"title": "Truffles",
+		"author": "Rakesh Potnuru",
+		"copyright": "Truffles",
+		"description": "Truffles",
+		"image": "",
+		"altText": "Truffles",
+		"ogType": "website",
+		"pages": {
+			"home": {
+				"title": "Truffles",
+				"description": "Truffles dashboard",
+				"image": ""
+			},
+			"login": {
+				"title": "Truffles",
+				"description": "Login to Truffles.",
+				"image": ""
+			},
+			"register": {
+				"title": "Truffles",
+				"description": "Register for a Truffles account.",
+				"image": ""
+			}
+		}
+	}
+}
