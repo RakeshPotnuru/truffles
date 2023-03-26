@@ -36,6 +36,7 @@ export default function DashboardPage({ assets }: ProtectedPageProps) {
 	);
 }
 
+// @ts-ignore
 export const getServerSideProps: GetServerSideProps<
 	ProtectedPageProps
 > = async context => {
