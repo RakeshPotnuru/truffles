@@ -43,10 +43,10 @@ const NavItem: React.FC<INavItem> = ({
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 			onClick={handleClick}
-			className={`flex cursor-pointer flex-row items-center space-x-4 rounded-xl p-4 font-bold text-brand-300 hover:bg-brand-50/20 hover:text-brand-50 ${activeStyle}`}
+			className={`flex cursor-pointer flex-row items-center space-x-4 rounded-xl p-3 font-bold text-brand-300 hover:bg-brand-50/20 hover:text-brand-50 lg:p-4 ${activeStyle}`}
 		>
 			<Icon color={isActive || activeItem === name ? '#124BFB' : '#718096'} />
-			<span>{name}</span>
+			<span className="hidden lg:block">{name}</span>
 		</li>
 	);
 };
@@ -57,7 +57,7 @@ const Sidebar: FC<IProps> = () => {
 	const [activeItem, setActiveItem] = useState('Assets');
 
 	return (
-		<div className="container mt-0.5 flex h-[90vh] w-[20%] flex-col justify-between bg-brand-100 py-8 px-6">
+		<div className="container mt-0.5 flex h-[90vh] w-[20%] flex-col justify-between bg-brand-100 py-8 px-4 md:w-[10%] lg:w-[20%] lg:px-6">
 			<ul className="">
 				<NavItem
 					name="Assets"

@@ -5,3 +5,5 @@ export { default as SettingsIcon } from './SettingsIcon';
 export { default as QuestionIcon } from './QuestionIcon';
 export { default as WalletIcon } from './WalletIcon';
 export { default as FiltersIcon } from './FiltersIcon';
+export { default as MenuIcon } from './MenuIcon';
+export { default as CloseIcon } from './CloseIcon';

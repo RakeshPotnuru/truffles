@@ -1,14 +1,20 @@
 import { useState } from 'react';
+import type { FC } from 'react';
 import { countries } from '../../data/countries';
 
-type Country = {
+interface Country {
 	name: string;
 	code: string;
 	exampleNumber: string;
 	countryCode: string;
-};
+}
 
-const MobileNumInput = () => {
+interface IProps {
+	value: string;
+	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const MobileNumInput: FC<IProps> = ({ value, onChange }) => {
 	const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
 
 	const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -37,9 +43,11 @@ const MobileNumInput = () => {
 					))}
 				</select>
 				<input
+					onChange={onChange}
 					id="phone"
 					name="phone"
-					type="tel"
+					value={value}
+					type="number"
 					placeholder={`+${selectedCountry.code} ${selectedCountry.exampleNumber}`}
 					className="border-gray-300 w-[85%] rounded-r-lg border-brand-300/50 p-2"
 				/>

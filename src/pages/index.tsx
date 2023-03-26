@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Cookies from 'cookies';
+import { GetServerSideProps } from 'next';
 
 import Dashboard from '@/components/dashboard/Dashboard';
 import siteConfig from '../../config/site.config';
-import { GetServerSideProps } from 'next';
 
 type Asset = {
 	id: number;
@@ -44,8 +44,6 @@ export const getServerSideProps: GetServerSideProps<
 	const cookies = new Cookies(req, res);
 	const token = cookies.get('token');
 
-	console.log('token: ' + token);
-
 	if (!token) {
 		return {
 			redirect: {
@@ -72,7 +70,6 @@ export const getServerSideProps: GetServerSideProps<
 
 	// Get the assets data
 	const { data } = await response.json();
-	console.log('data: ' + data);
 
 	return {
 		props: {

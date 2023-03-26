@@ -1,18 +1,15 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import type { FC } from 'react';
+import { useState } from 'react';
 
 import { Button } from '@/common/ui';
 import { Input } from '@/common/ui/';
-import { useState } from 'react';
 
 interface IProps {}
 
 const Login: FC<IProps> = () => {
 	const [email, setEmail] = useState<string>('');
 	const [password, setPassword] = useState<string>('');
-
-	const router = useRouter();
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -26,17 +23,18 @@ const Login: FC<IProps> = () => {
 		});
 
 		if (response.ok) {
-			router.push('/');
+			window.location.href = '/';
+			localStorage.setItem('isAuthenticated', 'true');
 		}
 	};
 
 	return (
-		<div className="h-[90vh] bg-brand-200">
-			<div className="absolute top-[30%] left-[37%] flex flex-col items-center justify-center rounded-lg bg-brand-100 p-10 text-brand-300 shadow-md">
+		<div className="h-[100vh] bg-brand-200">
+			<div className="absolute top-[20%] left-0 flex flex-col items-center justify-center rounded-lg bg-brand-100 p-10 text-brand-300 shadow-md md:left-[20%] lg:left-[37%] lg:top-[30%]">
 				<h1 className="text-2xl font-bold text-heading">
 					Log in to your account
 				</h1>
-				<p>Welcome back! Please enter your details.</p>
+				<p className="text-center">Welcome back! Please enter your details.</p>
 				<form onSubmit={handleSubmit}>
 					<div className="mt-10 flex w-full flex-col space-y-6">
 						<Input
