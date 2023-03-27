@@ -39,7 +39,9 @@ const Assets: FC<IProps> = ({ assets }) => {
 							</th>
 							<th scope="col">Asset</th>
 							<th scope="col">Amount</th>
-							<th scope="col">Request Status</th>
+							<th scope="col" className="whitespace-nowrap">
+								Request Status
+							</th>
 						</tr>
 					</thead>
 					<tbody className="divide-y divide-brand-300/20">
@@ -54,7 +56,7 @@ const Assets: FC<IProps> = ({ assets }) => {
 											asset.status === 'Sent'
 												? 'border-[#B45309] bg-[#B45309]/10 text-[#B45309]'
 												: 'border-[#15803D] bg-[#15803D]/10 text-[#15803D]'
-										} max-w-max rounded-full border-2 p-1.5 py-0.5 text-xs`}
+										} m-auto max-w-max rounded-full border-2 p-1.5 py-0.5 text-xs`}
 									>
 										{asset.status}
 									</p>

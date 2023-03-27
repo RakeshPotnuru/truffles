@@ -8,7 +8,6 @@ import { CloseIcon, MenuIcon, WalletIcon } from '@/assets/icons';
 
 const Navbar = () => {
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
-	// const [isLessThan768, setIsLessThan768] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	useEffect(() => {
@@ -19,19 +18,11 @@ const Navbar = () => {
 		}
 	}, []);
 
-	// useEffect(() => {
-	// 	if (typeof window !== 'undefined') {
-	// 		if (window.innerWidth < 768) {
-	// 			setIsLessThan768(true);
-	// 		}
-	// 	}
-	// }, []);
-
 	return (
-		<nav className="flex justify-between px-10 py-4 shadow-md">
+		<nav className="flex justify-between p-4 shadow-md md:px-10">
 			<Image src={Logo} alt="Truffles Logo" loading="lazy" />
 			{isAuthenticated ? (
-				<Button className="flex flex-row space-x-2 bg-brand-50 px-2 text-brand-100 md:px-6">
+				<Button className="flex flex-row space-x-2 bg-brand-50 px-1.5 text-brand-100 md:px-6">
 					<WalletIcon />
 					<span className="hidden md:block">Connect wallet</span>
 				</Button>
@@ -44,7 +35,7 @@ const Navbar = () => {
 						<MenuIcon />
 					</div>
 					{isMenuOpen && (
-						<div className="absolute right-4 top-2 flex flex-col items-center space-y-4 rounded-lg bg-brand-100 p-4 shadow-md">
+						<div className="absolute right-4 top-2 z-10 flex flex-col items-center space-y-4 rounded-lg bg-brand-100 p-4 shadow-md">
 							<div
 								onClick={() => setIsMenuOpen(!isMenuOpen)}
 								className="flex cursor-pointer self-end hover:opacity-80"
@@ -52,10 +43,10 @@ const Navbar = () => {
 								<CloseIcon />
 							</div>
 							<Link href="/login">
-								<Button>Login</Button>
+								<Button className="hover:text-brand-50">Login</Button>
 							</Link>
 							<Link href="/register">
-								<Button>Sign Up</Button>
+								<Button className="hover:text-brand-50">Sign Up</Button>
 							</Link>
 						</div>
 					)}
